@@ -1,6 +1,91 @@
+/* Import Monaspace fonts */
+@font-face {
+    font-family: 'Monaspace Neon';
+    src: url('fonts/monospace/MonaspaceNeon-ExtraLight.woff2') format('woff2'),
+         url('fonts/monospace/MonaspaceNeon-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Monaspace Xenon';
+    src: url('fonts/monospace/MonaspaceXenon-ExtraLight.woff2') format('woff2'),
+        url('fonts/monospace/MonaspaceXenon-ExtraLight.woff') format('woff');
+}
+
 body {
-  text-align: center;
-  font-family: 'Arial';
-  background: azure;
-  color: purple;
+    background-color: #333333; /* Dark grey background */
+    color: #E7D5C7; /* Default text color */
+    font-family: 'Monaspace Neon', sans-serif;
+    font-feature-settings: "calt" 1, "liga" 1, "ss01" 1, "ss02" 1, "ss03" 1; /* Enable texture healing and a bunch of ligatures */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20%; /* Add left and right margin */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Monaspace Xenon', sans-serif; /* Use Xenon for headers */
+    font-feature-settings: "calt" 1, "liga" 1, "ss01" 1, "ss02" 1, "ss03" 1; /* Enable texture healing and a bunch of ligatures */
+    color: #E3826F; /* Title color */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #E4A9A4; /* Secondary title color */
+}
+
+h3 {
+    font-size: 1.75em;
+    color: #EFBA97; /* Tertiary title color */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #F1CCBB; /* Link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styles for specific elements */
+.highlight {
+    color: #EFBA97; /* Highlight text color */
+    font-weight: bold;
+}
+
+.section {
+    margin-bottom: 2em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 0 3%; /* Reduce side margins on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
 }
